@@ -3,12 +3,17 @@
 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
 '''
 
+
 # solution 1
 class Solution:
     # array 二维列表
     def Find(self, target, array):
-# write code here
-            pass
+        # write code here
+        for idx1, line in enumerate(target):
+            for idx2, num in enumerate(line):
+                if num == array:
+                    return True
+        return False
 
 
 # solution 2
@@ -16,11 +21,17 @@ class Solution:
     # array 二维列表
     def Find(self, target, array):
         # write code here
-            pass
+        i = 0
+        j = len(array) - 1
 
-
-
-
+        while i < len(array) and j > 0:
+            if target > array[i][j]:
+                i += 1
+            elif target < array[i][j]:
+                j -= 1
+            else:
+                return True
+        return False
 
 # answer:
 
