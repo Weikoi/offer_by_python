@@ -28,7 +28,7 @@ class Solution2:
             if i == ' ':
                 char_list.remove(' ')
                 char_list.insert(idx, '%20')
-        return ''.join(char_list)
+        return '%20'.join(char_list)
 
 
 if __name__ == '__main__':
