@@ -19,6 +19,7 @@
 target >= 3
 f(n) = f(target - 1) + f(targte-2)
 
+本类题目重要的是分析的过程
 '''
 
 
