@@ -29,23 +29,23 @@ class Solution:
 
 # results:
 # -*- coding:utf-8 -*-
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-
-
-class Solution:
-    # 返回构造的TreeNode根节点
-    def reConstructBinaryTree(self, preorder, inorder):
-        # write code here
-        if not preorder or not inorder:
-            return None
-        root = TreeNode(preorder[0])
-        idx = inorder.index(preorder[0])
-
-        # 可以动手试一下啊，第一个参数
-        root.left = self.reConstructBinaryTree(preorder[1:idx + 1], inorder[:idx])
-        root.right = self.reConstructBinaryTree(preorder[idx + 1:], inorder[idx + 1:])
-        return root
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+#
+#
+# class Solution:
+#     # 返回构造的TreeNode根节点
+#     def reConstructBinaryTree(self, preorder, inorder):
+#         # write code here
+#         if not preorder or not inorder:
+#             return None
+#         root = TreeNode(preorder[0])
+#         idx = inorder.index(preorder[0])
+#
+#         # 可以动手试一下啊，第一个参数
+#         root.left = self.reConstructBinaryTree(preorder[1:idx + 1], inorder[:idx])
+#         root.right = self.reConstructBinaryTree(preorder[idx + 1:], inorder[idx + 1:])
+#         return root
