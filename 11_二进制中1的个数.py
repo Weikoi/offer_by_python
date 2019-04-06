@@ -12,7 +12,6 @@ def one_nums(n):
     return count
 
 
-def 
 
 
 if __name__ == '__main__':
