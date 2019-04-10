@@ -7,7 +7,7 @@ class TreeNode(object):
 # 核心思路是判断二叉树的深度
 
 
-class Solution():
+class Solution:
     def getDeepth(self, Root):
         if Root is None:
             return 0
