@@ -4,6 +4,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 # 核心思路是判断二叉树的深度
 
 
@@ -18,8 +19,7 @@ class Solution:
     def IsBalance_solution(self, pRoot):
         if pRoot is None:
             return True
-        right = self.getDeepth(pRoot.right)
-        left = self.getDeepth(pRoot.left)
-        if abs(right - left) > 1:
-            return False
-        return self.IsBalance_solution(pRoot.right) and self.IsBalance_solution(pRoot.left)
+        right_dep = self.getDeepth(pRoot.right)
+        left_dep = self.getDeepth(pRoot.left)
+        return self.IsBalance_solution(pRoot.right) and self.IsBalance_solution(pRoot.left) and abs(
+            right_dep - left_dep) < 2
