@@ -11,6 +11,6 @@ class Solution:
             return True
         if not left or not right:
             return False
-        if left.val!= right.val:
+        if left.val != right.val:
             return False
         return self.check(left.left, right.right) and self.check(left.right, right.left)
